@@ -188,7 +188,7 @@ source ~/.bashrc
 
 也可以看到当前节点。
 
-![image-20250408210931109](https://raw.githubusercontent.com/Kutbas/GraphBed/main/Typora/202504082135633.png?token=BA6KPE7Z5VQ4VLS6Q6W3KC3H6UTHS)
+![image-20250408210931109](https://raw.githubusercontent.com/Kutbas/GraphBed/main/Typora/202504082135633.png)
 
 其中，`Selector` 表示选择器，切换节点时，我们需要先确定主选择器，再确定要切换的节点。
 
