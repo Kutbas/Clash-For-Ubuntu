@@ -149,5 +149,61 @@ source ~/.bashrc
 
 ## 切换节点
 
+在终端环境下，如果要切换节点，可按如下步骤进行：
 
+1. 安装 JSON 处理工具 **jq**：
 
+   ```bash
+   sudo apt install jq
+   ```
+
+2. 获取当前节点列表：
+
+   ```bash
+   curl -s http://127.0.0.1:9090/proxies | jq
+   ```
+
+   执行命令后，会看到类似下面的输出：
+
+   ```json
+   {
+     "proxies": {
+       "节点选择": {
+         "type": "Selector",
+         "now": "香港01",
+         "all": [
+           "香港01",
+           "日本01",
+           "新加坡01"
+         ]
+       },
+       "香港01": {
+         "type": "Shadowsocks",
+         "udp": true
+       },
+       ...
+     }
+   }
+   ```
+
+也可以看到当前节点。
+
+![image-20250408210931109](https://raw.githubusercontent.com/Kutbas/GraphBed/main/Typora/202504082109838.png?token=BA6KPEYFTSVK6NL7EVVBVQDH6UQEY)
+
+其中，`Selector` 表示选择器，切换节点时，我们需要先确定主选择器，再确定要切换的节点。
+
+3. 以我的配置文件为例，其中选择器名为 `🚀 节点选择`（空格变为`%20`），要切换到 `新加坡01` 节点，那么命令应该是：
+
+   ```bash
+   curl -X PUT http://127.0.0.1:9090/proxies/🚀%20节点选择 \
+     -H "Content-Type: application/json" \
+     -d '{"name":"新加坡01"}'curl -s http://127.0.0.1:9090/proxies/🚀%20节点选择 | jq
+   ```
+
+4. 查看节点是否切换成功：
+
+   ```bash
+   curl -s http://127.0.0.1:9090/proxies/🚀%20节点选择 | jq
+   ```
+
+   
