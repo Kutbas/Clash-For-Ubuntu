@@ -33,7 +33,7 @@
    clash -v
    ```
 
-   ![image-20250408141524867](https://raw.githubusercontent.com/Kutbas/GraphBed/main/Typora/202504082135037.png)
+   ![image-20250408141524867](https://graphbed-1331926955.cos.ap-shanghai.myqcloud.com/GraphBed/202504081844676.png)
 
    如果能显示 clash 的版本信息，说明可以正常运行。
 
@@ -43,7 +43,7 @@
 
 如果此前已经在 Windows 系统上用 clash 订阅了机场，我们就可以直接把那边的配置信息复制到 Ubuntu 上的 `config.yaml` 文件中。
 
-![image-20250408142547903](https://raw.githubusercontent.com/Kutbas/GraphBed/main/Typora/202504082136900.png)
+![image-20250408142547903](https://graphbed-1331926955.cos.ap-shanghai.myqcloud.com/GraphBed/202504081801118.png)
 
 配置完成后，重新启动 clash，如果有如下提示信息，说明 clash 已经开始运行。
 
@@ -143,7 +143,7 @@ source ~/.bashrc
    sudo systemctl status clash
    ```
 
-   ![image-20250408144552017](https://raw.githubusercontent.com/Kutbas/GraphBed/main/Typora/202504082136694.png)
+   ![image-20250408144552017](https://graphbed-1331926955.cos.ap-shanghai.myqcloud.com/GraphBed/202504081806178.png)
 
    当看到状态为”running“，说明 clash 服务已经在后台开始运行。
 
@@ -188,7 +188,7 @@ source ~/.bashrc
 
 也可以看到当前节点。
 
-![image-20250408210931109](https://raw.githubusercontent.com/Kutbas/GraphBed/main/Typora/202504082135633.png)
+![image-20250408210931109](https://graphbed-1331926955.cos.ap-shanghai.myqcloud.com/GraphBed/202504082135633.png)
 
 其中，`Selector` 表示选择器，切换节点时，我们需要先确定主选择器，再确定要切换的节点。
 
